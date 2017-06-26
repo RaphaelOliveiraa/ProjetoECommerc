@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.bnt1) ImageButton bnt1;
     @BindView(R.id.bnt2) ImageButton bnt2;
     @BindView(R.id.bnt3) ImageButton bnt3;
+    @BindView(R.id.webview1) WebView webview1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.bnt)
     public void bnt() {
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]"));
-        startActivity(intent);
+
+        WebSettings ws = webview1.getSettings();
+        ws.setJavaScriptEnabled(true);
+        ws.setSupportZoom(false);
+        webview1.loadUrl("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]");
 
     }
 
     @OnClick(R.id.bnt1)
     public void bnt1() {
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]"));
-        startActivity(intent);
+        WebSettings ws = webview1.getSettings();
+        ws.setJavaScriptEnabled(true);
+        ws.setSupportZoom(false);
+        webview1.loadUrl("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]");
+
     }
 
     @OnClick(R.id.bnt2)
