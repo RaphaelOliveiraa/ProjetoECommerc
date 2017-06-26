@@ -35,30 +35,33 @@ public class MainActivity extends AppCompatActivity {
         ws.setJavaScriptEnabled(true);
         ws.setSupportZoom(false);
         webview1.loadUrl("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]");
-
     }
 
     @OnClick(R.id.bnt1)
     public void bnt1() {
+
         WebSettings ws = webview1.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.setSupportZoom(false);
         webview1.loadUrl("http://lista.mercadolivre.com.br/vestidos-em-viscose%2C-estampado-ver%C3%A3o-longos#D[A:vestidos-em-viscose,-estampado-verão-longos]");
-
     }
 
     @OnClick(R.id.bnt2)
     public void bnt2() {
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://produto.mercadolivre.com.br/MLB-818981319-vestido-listrado-feminino-ombro-a-ombro-manga-longa-curto-_JM?attribute=33000-52049&attribute=43000-52119"));
-        startActivity(intent);
+
+        WebSettings ws = webview1.getSettings();
+        ws.setJavaScriptEnabled(true);
+        ws.setSupportZoom(false);
+        webview1.loadUrl("http://produto.mercadolivre.com.br/MLB-818981319-vestido-listrado-feminino-ombro-a-ombro-manga-longa-curto-_JM?attribute=33000-52049&attribute=43000-52119");
     }
 
     @OnClick(R.id.bnt3)
     public void bnt3() {
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://produto.mercadolivre.com.br/MLB-818981319-vestido-listrado-feminino-ombro-a-ombro-manga-longa-curto-_JM?attribute=33000-52049&attribute=43000-52119"));
-        startActivity(intent);
+
+        WebSettings ws = webview1.getSettings();
+        ws.setJavaScriptEnabled(true);
+        ws.setSupportZoom(false);
+        webview1.loadUrl("http://produto.mercadolivre.com.br/MLB-818981319-vestido-listrado-feminino-ombro-a-ombro-manga-longa-curto-_JM?attribute=33000-52049&attribute=43000-52119");
     }
 
 
